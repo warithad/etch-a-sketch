@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    padding-right: 200px;
+    margin: 0px;
+}
+
+.box {
+
+}
+
+.container {
+    justify-self: end;
+    display: grid;
+    grid-template-columns:repeat(16, 50px);
+    grid-template-rows:repeat(16, 50px);
+    grid-row-gap: 1px;
+    grid-column-gap: 1px;
+}
