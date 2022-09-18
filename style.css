@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     margin: 0px;
     gap: 30px;
-    background-color: grey;
+    background-color: #DCDCDC;
 }
 /*header*/
 .header {
@@ -19,31 +19,51 @@ body {
 /*content*/
 .content {
     display: flex;
-    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content:space-between;
 }
 /*side-bar*/
 .side-bar {
-    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.side-bar-content {
+    width: 220px;
+    height: 50px;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 15px;
+    border-width: 0px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    
 }
 
  /*boxes*/
-.box {
+.box:hover{
+    background-color: black;
 }
 
-.container {
-
+#container {
     width: 600px;
     height: 600px;
     display: grid;
     background-color: white;
-    gap: 1px;
-    grid-template-columns:repeat(16, 1fr);
-    grid-template-rows:repeat(16, 1fr);
+    /* grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr); */
 }
 
-/* hover */
-.box:hover{
-    background-color: aqua;
+.black-color:hover {
+    background-color: black;
+}
+/* emptys-space*/
+.empty-space{
+    width: 100px;
 }
 
 /*footer*/

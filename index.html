@@ -2,17 +2,26 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+
     </head>
 
     <body>
         <div class="header">Etch-A-Sketch</div>
         <div class="content">
-            <div class="side-bar"></div>
-            <div class="container">
+            <div class="side-bar">
+                <button id="black" class="side-bar-content">BLACK</button>
+                <button id="rainbow" class="side-bar-content">RGB</button>
+                <button id="reset" class="side-bar-content">RESET</button>
             </div>
+
+            <div id="container"></div>
+            
+            <div class="empty-space"></div>
         </div>
         <div class="footer">Copyright &copy; me 2022 odin-project</div>
+        
+        <script src="script.js"></script>
     </body>
     
-    <script src="script.js"></script>
+    
 </html>
