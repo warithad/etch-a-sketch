@@ -16,6 +16,13 @@ body {
     padding-top: 20px;
 }
 
+/*title*/
+
+#title{
+    padding-left: 100px;
+
+}
+
 /*content*/
 .content {
     display: flex;
@@ -28,7 +35,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-
+    justify-content: center;
+    padding-left: 30px;
 }
 
 .side-bar-content {
@@ -44,18 +52,11 @@ body {
     
 }
 
- /*boxes*/
-.box:hover{
-    background-color: black;
-}
-
 #container {
     width: 600px;
     height: 600px;
     display: grid;
     background-color: white;
-    /* grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr); */
 }
 
 .black-color:hover {
@@ -73,4 +74,5 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     text-align: center;
+    padding-left: 150px;
 }
