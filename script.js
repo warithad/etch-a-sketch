@@ -2,13 +2,14 @@ const container = document.getElementById("container");
 const reset = document.getElementById('reset');
 const black = document.getElementById('black');
 const rainbow = document.getElementById('rainbow');
-
+const meter = document.getElementById('meter');
+const range = document.getElementById('value');
 
 var r = 0;
 var g = 0;
 var b = 0;
 
-var gridSize = 16;
+var gridSize = meter.value;
 
 function setGrid(value){
 
@@ -37,7 +38,6 @@ function setRainbowMode(){
     const boxes = document.querySelectorAll('.box');
 
     boxes.forEach(box => 
-        
         box.addEventListener('mouseover', () => {
             generateRandomNumber();
             box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
@@ -54,30 +54,48 @@ function setBlackMode(){
         }));
 }
 
-// resets paint to white mode
-function resetToDefault(){
-     gridSize = prompt('enter desired grid dimension');
-    // if( typeof gridSize !== Number){
-    //     return;
-    // }
-
+// resets grid to current value of slider and paint to white mode
+function resetToValue(){
+    gridSize = meter.value;
     setGrid(gridSize);
+    setText();
     const boxes = document.querySelectorAll('.box');
-
     boxes.forEach(box => box.setAttribute('style', 'background-color: white'));
+    setBlackMode();
+}
+
+// resets grid to 1
+function resetToDefault(){
+    meter.value = 1;
+    gridSize = meter.value;
+    setGrid(gridSize);
+    setText();
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => box.setAttribute('style', 'background-color: white'));
+}
+
+function setText(){
+    range.textContent = gridSize + 'X' + gridSize;
 }
 
 reset.addEventListener('click', () =>{
     resetToDefault();
 });
 
+
 black.addEventListener('click', () =>{
     setBlackMode();
 });
 
+
 rainbow.addEventListener('click', () =>{
     setRainbowMode();
 });
+
+meter.addEventListener('change', () => {
+    resetToValue();
+})
+
 
 window.onload = () =>{
     setGrid(gridSize);

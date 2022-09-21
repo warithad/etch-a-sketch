@@ -52,6 +52,22 @@ body {
     
 }
 
+
+/*meter*/
+#ranges {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+#value {
+    align-self: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 20px;
+}
+
+
 #container {
     width: 600px;
     height: 600px;
